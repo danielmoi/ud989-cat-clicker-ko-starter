@@ -13,10 +13,13 @@ var ViewModel = function () {
   
   // initialise new property "name" and set its value to "Sally"
   this.name = ko.observable('Sally');
-  this.imgSrc = ko.observable('Sally.jpg');
+  
+  
+
+  this.imgSrc = ko.observable('img/Sally.jpg');
   this.imgAttribution = ko.observable('http://ampersandmoi.com');
 
-  
+   
   //
   // CONTROLLER = VIEWMODEL
   //
