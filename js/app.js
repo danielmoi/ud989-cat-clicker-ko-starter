@@ -15,12 +15,11 @@ var ViewModel = function () {
   this.name = ko.observable('Sally');
 
   this.nicknames = ko.observableArray([
-    {
-      nickname1: "Sal",
-      nickname2: "S-Lo",
-      nickname3: "Salzzzz",
-      nickname4: "Salaza"
-    }
+    {nickname: "Sal"},
+    {nickname: "S-Lo"},
+    {nickname: "Salzzzz"},
+    {nickname: "Salaza"}
+    
   ]);
 
 
