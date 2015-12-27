@@ -13,11 +13,13 @@ var ViewModel = function () {
 
   // initialise new property "name" and set its value to "Sally"
   this.name = ko.observable('Sally');
-  
+
   this.nicknames = ko.observableArray([
-    {nickname1: "Sal",
-     nickname2: "S-Lo", 
-     nickname3: "Salzzzz"
+    {
+      nickname1: "Sal",
+      nickname2: "S-Lo",
+      nickname3: "Salzzzz",
+      nickname4: "Salaza"
     }
   ]);
 
@@ -31,6 +33,7 @@ var ViewModel = function () {
   }, this);
 
   this.imgSrc = ko.observable('img/Sally.jpg');
+
   this.imgAttribution = ko.observable('http://ampersandmoi.com');
 
 
