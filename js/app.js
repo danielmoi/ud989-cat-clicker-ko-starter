@@ -14,21 +14,24 @@ var ViewModel = function () {
   // initialise new property "name" and set its value to "Sally"
   this.name = ko.observable('Sally');
 
-  this.nicknames = ko.observableArray([
-    {nickname: "Sal"},
-    {nickname: "S-Lo"},
-    {nickname: "Salzzzz"},
-    {nickname: "Salaza"}
+  this.nicknames = ko.observableArray(
+    ["Sal", "S-Lo", "Salzzzz", "Salaza"]
     
-  ]);
+  );
 
 
   this.level = ko.computed(function () {
-    if (this.clickCount() < 11) {
-      return "Newborn";
+    var title;
+    var clicks = this.clickCount();
+    if (clicks < 11) {
+      title = "Newborn";
+    } 
+    else if (clicks < 20) {
+      title = "Infant";
     } else {
-      return "Infant";
+      title = "Ninja";
     }
+    return title;
   }, this);
 
   this.imgSrc = ko.observable('img/Sally.jpg');
