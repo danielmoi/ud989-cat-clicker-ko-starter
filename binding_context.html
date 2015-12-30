@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Binding Context</title>
+</head>
+
+<body>
+
+  <div data-bind="with: cat">
+    <div data-bind="text: name"></div>
+    <div data-bind="text: age"></div>
+    <div data-bind="text: $parent.country"></div>
+  </div>
+<hr>
+  <div data-bind="with: dog">
+    <div data-bind="text: name"></div>
+    <div data-bind="text: age"></div>
+    <div data-bind="text: $parent.country"></div>
+  </div>
+
+</body>
+
+<script src="js/lib/knockout-3.2.0.js"></script>
+<script src="js/binding.js"></script>
+
+</html>
