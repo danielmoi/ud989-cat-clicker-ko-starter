@@ -67,3 +67,20 @@ var ViewModel = function () {
       }
       return title;
     }, this);
+  
+  
+  
+  // *************
+  
+  
+<img src="" alt="cute cat" data-bind="click: $parent.incrementCounter, attr: {src: imgSrc}">
+
+  this.currentCat = ko.observable( new Cat() );
+
+  this.incrementCounter = function () {
+    this.clickCount(this.clickCount() + 1)
+  };
+
+  // ***************
+  
+  
