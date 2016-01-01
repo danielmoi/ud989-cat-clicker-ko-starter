@@ -2,14 +2,17 @@
 // Model
 // **
 
-var Cat = function () {
-  this.clickCount = ko.observable(0);
+var Cat = function (data) {
+  this.clickCount = ko.observable(data.clickCount);
 
-  this.name = ko.observable('Sally');
+  this.name = ko.observable(data.name);
 
-  this.nicknames = ko.observableArray(
-    ["Sal", "S-Lo", "Salzzzz", "Salaza"]
-  );
+  this.imgSrc = ko.observable(data.imgSrc);
+  
+  this.imgAttribution = ko.observable(data.imgAttribution);
+  
+  this.nicknames = ko.observableArray(data.nicknames);
+
 
 
   this.level = ko.computed(function () {
@@ -25,9 +28,7 @@ var Cat = function () {
     return title;
   }, this);
 
-  this.imgSrc = ko.observable('img/Sally.jpg');
 
-  this.imgAttribution = ko.observable('http://ampersandmoi.com');
 };
 
 // **
@@ -37,7 +38,13 @@ var Cat = function () {
 var ViewModel = function () {
   
   var self = this;
-  this.currentCat = ko.observable( new Cat() );
+  this.currentCat = ko.observable( new Cat({
+    clickCount: 0,
+    name: 'Sally',
+    imgSrc: 'img/Sally.jpg',
+    imgAttribution: 'http://ampersandmoi.com',
+    nicknames: ['Salz', 'S-Lo', 'Sall 4000', 'Smackdown S']
+  }) );
   
 
 
