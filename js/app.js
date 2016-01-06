@@ -89,8 +89,9 @@ var ViewModel = function () {
     self.currentCat().clickCount(self.currentCat().clickCount() + 1)
   };
 
-  this.clickFunction = function (item) {
-    console.log(self.catList());
+  this.setCat = function (clickedCat) {
+    // self is 'ViewModel', and we re-set the currentCat's value to clickedCat (which is like 'event' – captured for every click event)
+    self.currentCat(clickedCat)
   };
 
 
